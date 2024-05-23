@@ -83,5 +83,5 @@ def main():
     lista.eliminar(10)
     print("Tamaño después de eliminar:", lista.tamaño)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
