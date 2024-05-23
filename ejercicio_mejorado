@@ -12,7 +12,7 @@ def maximo_y_suma(lista):
     for num in lista:
         if num > maximo:
             maximo = num
-        suma += num
+            suma += num
     return maximo, suma
 
 # Main
