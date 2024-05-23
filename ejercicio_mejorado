@@ -1,0 +1,32 @@
+import random
+import time
+
+# Genera una lista de números aleatorios
+def generar_lista(tamano):
+    return [random.randint(1, 1000000000000000000000000000) for _ in range(tamano)]
+
+# Encuentra el elemento máximo en la lista y suma todos los elementos en un solo recorrido
+def maximo_y_suma(lista):
+    maximo = lista[0]
+    suma = 0
+    for num in lista:
+        if num > maximo:
+            maximo = num
+        suma += num
+    return maximo, suma
+
+# Main
+if __name__ == "__main__":
+    tamano_lista = 1000
+    start_time = time.time()  # Inicia el cronómetro
+
+    lista = generar_lista(tamano_lista)
+    maximo, suma = maximo_y_suma(lista)
+
+    end_time = time.time()  # Detiene el cronómetro
+    duration = end_time - start_time  # Calcula la duración
+
+    print(f"Lista: {lista}")
+    print(f"Máximo: {maximo}")
+    print(f"Suma: {suma}")
+    print(f"Tiempo de ejecución: {duration:.6f} segundos")
